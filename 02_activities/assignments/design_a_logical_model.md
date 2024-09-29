@@ -17,6 +17,30 @@ Bonus: Are there privacy implications to this, why or why not?
 ```
 Your answer...
 ```
+Type 1 SCD is owerwriting addresses when a more recent address is entered. The customer_address table would include the following columns:
+
+customer_id
+address
+city
+province
+postal_code
+country
+
+This approach would keep things more simple, store less data, have less privacy implications.
+
+SCD type 2 is retaining changes. With every iteration of customer address the table would create a new record, while keeping historical records intact. Here is an example of what the table columns could look like in this case:
+
+customer_id
+address
+city
+province
+postal_code
+country
+effective_date
+expiry_date
+validity
+
+This would create more data and a larger table, also would add an ability to track history of address changes. However, there are privacy implications in this case. Customers need to be notified and give a consent to allow the company to keep and analyze their address change history records. Potentially, there could also be an ethical concerns of using address change history data for profiling customers. Old data shouldn't be stored for longer than it must be, and a necessity to keep historical records should be reviewed and discussed at least.
 
 ## Question 4
 Review the AdventureWorks Schema [here](https://i.stack.imgur.com/LMu4W.gif)
@@ -25,6 +49,13 @@ Highlight at least two differences between it and your ERD. Would you change any
 ```
 Your answer...
 ```
+My ERD shows a logical model of a database. It shows a scheme of tables and their columns, as well as describes types of relationships between them.
+
+The AdventureWorks schema includes key types and uses the key types to showcase column relationships. In my opinion, it lacks a clear visual depiction of column relationships. It also misses description of column relationship types, which would add more context and clarity to the scheme.
+
+My ERD shows exactly which column is related to which, but it lacks marking of primary and foreign keys.
+
+Given that a lack of clarity in AdventureWorks schema could cause misinterpretation and confusion, I prefer my ERD. It showcases clear columns relationships and their types. On the other hand, a physical model would be more detailed. Including data types and key types would add more context to my ERD.
 
 # Criteria
 
