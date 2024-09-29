@@ -1,4 +1,6 @@
-# Assignment 1: Design a Logical Model
+# Assignment 1: Maksym Parkhomchuk
+
+ Design a Logical Model
 
 ## Question 1
 Create a logical model for a small bookstore. 📚
